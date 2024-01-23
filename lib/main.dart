@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:sam3/pages/loginpage.dart';
+import 'package:sam3/auth/mainpage.dart';
+import 'package:firebase_database/firebase_database.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyBlSI1FNPPdFCbDaM4VeI8fuTrcf8nafp0",
+        authDomain: "myapp-6c030.firebaseapp.com",
+        databaseURL: "https://myapp-6c030-default-rtdb.firebaseio.com",
+        projectId: "myapp-6c030",
+        storageBucket: "myapp-6c030.appspot.com",
+        messagingSenderId: "814829565697",
+        appId: "1:814829565697:web:e39a7edbe35c49b40d8d00",
+        measurementId: "G-2QKZSW1CPT"),
+  );
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+  const MyApp({Key? key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: true,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      title: 'Bank Demo',
+      debugShowCheckedModeBanner: false,
+      home: Mainpage(),
     );
   }
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "262665311616",
+    "project_id": "web1-c1656",
+    "storage_bucket": "web1-c1656.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262665311616:android:cc7867deaf56359c1f9d65",
+        "android_client_info": {
+          "package_name": "com.example.sam3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNoYIqNX_TJ0kjnZj9Ft1L9qtiaGbtHVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
